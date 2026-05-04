@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linked | Official Homepage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="top"></div>
+    <div class="bg-orb orb-left" aria-hidden="true"></div>
+    <div class="bg-orb orb-right" aria-hidden="true"></div>
+
+    <header class="site-header">
+        <div class="container nav-wrap">
+            <h1 class="logo"><a href="#top" class="logo">Linked</a></h1>
+            <button
+                class="menu-toggle"
+                type="button"
+                aria-label="Toggle navigation"
+                aria-controls="primary-nav"
+                aria-expanded="false"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav id="primary-nav" class="main-nav" aria-label="Primary navigation">
+                <a href="#story">Story</a>
+                <a href="#features">Features</a>
+                <a href="#media">Media</a>
+                <a href="#play" class="nav-cta">Play Now</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero container">
+            <div class="hero-copy reveal reveal-1">
+                <p class="kicker">A Co-op Adventure</p>
+                <h2>The Sun Is Dead.</h2>
+                <p class="lead">
+                    Navigate an abandoned Earth and fight your way off the surface. Work with your partner to traverse harrowing biomes, escape relentless pursuers, and unravel the mystery of what happened to the solar system, all without getting unplugged.
+                </p>
+                <div class="hero-actions">
+                    <a class="btn btn-primary" href="#play">Play Now</a>
+                    <a class="btn btn-ghost" href="#media">See Images</a>
+                </div>
+            </div>
+
+            <div class="hero-card reveal reveal-2" aria-label="Game highlight panel">
+                <h3>Next Event</h3>
+                <p>Public demo release on May 6, 2026</p>
+                <ul>
+                    <li>1 initial level</li>
+                    <li>2-player co-op beta</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="story" class="story container reveal reveal-2">
+            <h2>What Is Linked?</h2>
+            <p>
+                Linked is a 2-player co-op platformer set on an abandoned Earth. You and your partner play as two robots left behind by humanity. You must explore the ruins of what was once a thriving metropolis, fight off the planet's mysterious new inhabitants, and find out what happened to a world that was once bustling with life.
+            </p>
+        </section>
+
+        <section id="features" class="features container">
+            <h2 class="reveal reveal-1">Core Features</h2>
+            <div class="feature-grid">
+                <article class="feature-card reveal reveal-1">
+                    <h3>Connect with Others</h3>
+                    <p>Play together with friends or make new ones in our online co-op mode.</p>
+                </article>
+                <article class="feature-card reveal reveal-2">
+                    <h3>Terrifying Enemies</h3>
+                    <p>Face off against relentless foes in a world filled with danger and uncertainty.</p>
+                </article>
+                <article class="feature-card reveal reveal-3">
+                    <h3>A Co-op Adventure</h3>
+                    <p>Explore what remains of a world long since abandoned with your partner in tow.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="media" class="media container reveal reveal-3">
+            <h2>Trailer & Images</h2>
+            <div class="media-grid">
+                <div class="media-tile">TRAILER</div>
+                <div class="media-tile">IMAGE 01</div>
+                <div class="media-tile">IMAGE 02</div>
+            </div>
+        </section>
+
+        <section id="play" class="play container reveal reveal-3">
+            <h2>Ready to Jump In?</h2>
+            <p>Download the game now and starting saving the world.</p>
+            <a class="btn btn-primary" href="#">Download Now</a>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-wrap">
+            <p>© Linked Team 2026</p>
+            <p>Made for the WED DAY</p>
+        </div>
+    </footer>
+
+    <script>
+        const menuButton = document.querySelector(".menu-toggle");
+        const nav = document.getElementById("primary-nav");
+
+        if (menuButton && nav) {
+            const setMenuState = (isOpen) => {
+                nav.classList.toggle("is-open", isOpen);
+                menuButton.setAttribute("aria-expanded", String(isOpen));
+            };
+
+            menuButton.addEventListener("click", () => {
+                const isOpen = !nav.classList.contains("is-open");
+                setMenuState(isOpen);
+            });
+
+            nav.querySelectorAll("a").forEach((link) => {
+                link.addEventListener("click", () => {
+                    setMenuState(false);
+                });
+            });
+
+            window.addEventListener("resize", () => {
+                if (window.innerWidth > 640) {
+                    setMenuState(false);
+                }
+            });
+        }
+    </script>
+</body>
+</html>
