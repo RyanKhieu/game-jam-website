@@ -1,13 +1,13 @@
 :root {
-	--bg: #040b1a;
-	--bg-soft: #0a1830;
-	--card: rgba(8, 21, 45, 0.72);
+	--bg: #3f0101;
+	--bg-soft: #5b0000;
+	--card: rgba(40, 17, 17, 0.72);
 	--text: #e8f1ff;
-	--muted: #9cb2d7;
-	--accent: #29e0b3;
-	--accent-2: #ffb84d;
+	--muted: #d79c9c;
+	--accent: #ac0000;
+	--accent-2: #b33c04;
 	--line: rgba(173, 209, 255, 0.18);
-	--shadow: 0 20px 40px rgba(2, 10, 24, 0.55);
+	--shadow: 0 20px 40px rgba(24, 2, 2, 0.55);
 }
 
 * {
@@ -27,9 +27,9 @@ body {
 	font-family: "Space Grotesk", sans-serif;
 	color: var(--text);
 	background:
-		radial-gradient(circle at 10% 15%, rgba(41, 224, 179, 0.15), transparent 40%),
+		radial-gradient(circle at 10% 15%, rgba(71, 33, 14, 0.15), transparent 40%),
 		radial-gradient(circle at 80% 5%, rgba(255, 184, 77, 0.16), transparent 40%),
-		linear-gradient(150deg, #040b1a 15%, #0a1d3e 55%, #091325 100%);
+		linear-gradient(150deg, #1a0404 15%, #220c0c 55%, #321b1b 100%);
 	min-height: 100vh;
 	line-height: 1.6;
 	position: relative;
@@ -42,8 +42,8 @@ body::before {
 	inset: 0;
 	pointer-events: none;
 	background-image:
-		linear-gradient(rgba(173, 209, 255, 0.07) 1px, transparent 1px),
-		linear-gradient(90deg, rgba(173, 209, 255, 0.07) 1px, transparent 1px);
+		linear-gradient(rgba(255, 173, 173, 0.07) 1px, transparent 1px),
+		linear-gradient(90deg, rgba(255, 173, 173, 0.07) 1px, transparent 1px);
 	background-size: 28px 28px;
 	mask-image: linear-gradient(to bottom, black, transparent 75%);
 }
@@ -66,20 +66,20 @@ body::before {
 .orb-left {
 	left: -100px;
 	top: 120px;
-	background: rgba(41, 224, 179, 0.24);
+	background: rgba(234, 44, 44, 0.24);
 }
 
 .orb-right {
 	right: -80px;
 	top: 30%;
-	background: rgba(255, 184, 77, 0.22);
+	background: rgba(194, 39, 0, 0.22);
 }
 
 .site-header {
 	position: sticky;
 	top: 0;
 	backdrop-filter: blur(10px);
-	background: rgba(4, 11, 26, 0.75);
+	background: rgba(26, 4, 4, 0.75);
 	border-bottom: 1px solid var(--line);
 	z-index: 2;
 }
@@ -169,6 +169,11 @@ body::before {
 	font-size: 0.82rem;
 }
 
+.subheadline {
+	margin: 0 0 0.8rem;
+	font-size: 1.15rem;
+}
+
 .hero h2 {
 	margin: 0;
 	font-family: "Bebas Neue", sans-serif;
@@ -203,13 +208,13 @@ body::before {
 
 .btn-primary {
 	background-color: var(--accent);
-	color: #022025;
-	box-shadow: 0 8px 22px rgba(41, 224, 179, 0.25);
+	color: var(--text);
+	box-shadow: 0 8px 22px rgba(224, 41, 41, 0.25);
 }
 
 .btn-ghost {
 	border-color: var(--line);
-	background: rgba(7, 18, 37, 0.55);
+	background: var(--card);
 }
 
 .hero-card,
@@ -297,7 +302,7 @@ section h2 {
 	letter-spacing: 0.06em;
 	font-size: 1.35rem;
 	background:
-		linear-gradient(125deg, rgba(41, 224, 179, 0.12), rgba(255, 184, 77, 0.11)),
+		linear-gradient(125deg, rgba(97, 66, 32, 0.12), rgba(255, 184, 77, 0.11)),
 		var(--card);
 }
 
@@ -315,7 +320,7 @@ section h2 {
 .site-footer {
 	margin-top: 2.5rem;
 	border-top: 1px solid var(--line);
-	background: rgba(4, 11, 26, 0.7);
+	background: rgba(26, 4, 4, 0.75);
 }
 
 .footer-wrap {
@@ -351,8 +356,8 @@ section h2 {
 
 .btn-primary:hover {
 	box-shadow:
-		0 0 20px rgba(41, 224, 179, 0.6),
-		0 0 40px rgba(25, 199, 241, 0.4);
+		0 0 20px rgba(224, 41, 41, 0.6),
+		0 0 40px rgba(241, 25, 25, 0.4);
 }
 
 .reveal-1 {
@@ -416,7 +421,7 @@ section h2 {
 		pointer-events: none;
 		border: 1px solid transparent;
 		border-radius: 12px;
-		background: rgba(4, 11, 26, 0.95);
+		background: rgba(26, 4, 4, 0.95);
 		transition:
 			max-height 0.32s ease,
 			opacity 0.25s ease,
