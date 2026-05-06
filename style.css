@@ -202,7 +202,7 @@ body::before {
 
 
 .btn-primary {
-	background: linear-gradient(90deg, var(--accent), #19c7f1);
+	background-color: var(--accent);
 	color: #022025;
 	box-shadow: 0 8px 22px rgba(41, 224, 179, 0.25);
 }
